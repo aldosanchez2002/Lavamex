@@ -51,10 +51,12 @@
             padding: 10px 15px;
             margin: 0 5px;
             border-radius: 50px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 500;
         }
         nav a:hover {
             background-color: #d95c00;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         h1, h2 {
             margin: 0;
@@ -74,7 +76,7 @@
         }
         .service-item {
             border: 0;
-            padding: 25px;
+            padding: 15px;
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -92,8 +94,8 @@
             margin: 5px 0;
         }
         .price {
-            font-weight: bold;
-            color: #d95c00;
+            font-weight: normal;
+            color: #333;
             font-size: 1.2em;
         }
         .map-container {
@@ -114,6 +116,11 @@
         .review-section {
             text-align: center;
             padding: 20px;
+            max-width: 500px;
+            margin: 40px auto;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-radius: 12px;
         }
         .review-link {
             display: inline-block;
@@ -142,7 +149,7 @@
         .price-list {
             display: grid;
             grid-template-columns: 1fr auto;
-            gap: 5px 15px;
+            gap: 2px 10px;
             text-align: left;
             margin: 0 auto;
             width: fit-content;
@@ -153,6 +160,22 @@
         .service-item-wide {
             grid-column: span 2;
         }
+        .contact-info {
+            text-align: center;
+            padding: 10px;
+            margin: 20px auto;
+        }
+        .contact-info h2 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .contact-info p {
+            font-size: 0.9em;
+            color: #666;
+            max-width: 500px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -162,6 +185,7 @@
         <div class="nav-links">
             <a href="#ubicacion">Ubicación</a>
             <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
         </div>
     </nav>
 
@@ -222,9 +246,9 @@
                 <h3>Polish</h3>
                 <p>Pulido para eliminar imperfecciones.</p>
                 <div class="price-list">
-                    <span>Carro:</span><span class="price">$100.00</span>
-                    <span>SUV Chica:</span><span class="price">$130.00</span>
-                    <span>SUV Grande, Van:</span><span class="price">$150.00</span>
+                    <span>Carro:</span><span class="price">$100</span>
+                    <span>SUV Chica:</span><span class="price">$130</span>
+                    <span>SUV Grande, Van:</span><span class="price">$150</span>
                 </div>
             </div>
             <div class="service-item">
@@ -232,7 +256,7 @@
                 <p>Lavado de motor a presión, se usan rampas.</p>
                 <div class="price-list">
                     <span>Carro, Pick-up Sencilla:</span><span class="price">$400</span>
-                    <span>Off Road:</span><span class="price">$360.00</span>
+                    <span>Off Road:</span><span class="price">$360</span>
                     <span>Tracto Camión:</span><span class="price">$800</span>
                 </div>
             </div>
@@ -240,8 +264,8 @@
                 <h3>Servicios adicionales.</h3>
                 <div class="price-list">
                     <span>Armor All:</span><span class="price">$40</span>
-                    <span>Aroma:</span><span class="price">$20.00</span>
-                    <span>Boleada:</span><span class="price">$60.00</span>
+                    <span>Aroma:</span><span class="price">$20</span>
+                    <span>Boleada:</span><span class="price">$60</span>
                     <span>Cinturones:</span><span class="price">$200</span>
                     <span>Cielo:</span><span class="price">$200</span>
                     <span>Cajuela:</span><span class="price">$200</span>
@@ -260,6 +284,11 @@
         </a>
         <a class="review-link" href="https://g.page/r/CR5DzKh65wT2EAE/review" target="_blank">¡Deja tu reseña en Google!</a>
     </section>
+
+    <div id="contacto" class="contact-info">
+        <h2>Contacto</h2>
+        <p>Por favor visite nuestra ubicación durante el horario de atención. No contamos con teléfono ni correo electrónico. ¡Esperamos verle pronto!</p>
+    </div>
 
 </body>
 </html>
