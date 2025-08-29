@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavamex - Lavado de Autos</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding-top: 60px;
+        }
+        header {
+            background-image: linear-gradient(rgba(217, 92, 0, 0.8), rgba(217, 92, 0, 0.8)), url('https://storage.googleapis.com/g.co/immersive-docs/uploaded:Screenshot%202025-08-29%20at%204.21.50%E2%80%AFPM.jpg-29aa7aa1-8144-431e-906c-a9ec4a95a42b');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        nav {
+            background-color: #b34b00;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-brand {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #d95c00;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        section {
+            padding: 40px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-radius: 12px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .service-item {
+            border: 0;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        .service-item h3 {
+            margin-top: 0;
+            color: #d95c00;
+        }
+        .service-item p {
+            margin: 5px 0;
+        }
+        .price {
+            font-weight: bold;
+            color: #d95c00;
+            font-size: 1.2em;
+        }
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+            border-radius: 12px;
+        }
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0;
+        }
+        .review-section {
+            text-align: center;
+            padding: 20px;
+        }
+        .review-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #d95c00;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+        .review-link:hover {
+            background-color: #b34b00;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .google-reviews-image {
+            display: block;
+            margin: 0 auto 15px auto;
+            max-width: 200px;
+            height: auto;
+        }
+        .price-list {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 5px 15px;
+            text-align: left;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        .price-list .price {
+            text-align: right;
+        }
+        .service-item-wide {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-brand">LAVAMEX</div>
+        <div class="nav-links">
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#servicios">Servicios</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>LAVAMEX</h1>
+        <p>Lavado de Autos</p>
+    </header>
+
+    <section id="ubicacion">
+        <h2>Ubicación</h2>
+        <p>Av. Waterfill 216, Waterfill Río Bravo, 32550 Juárez, Chih., Mexico</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3395.743831811716!2d-106.35210169999999!3d31.668227499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d299f659249%3A0xf604e77aa8cc431e!2sLava%20Mex%20Car%20wash!5e0!3m2!1sen!2sus!4v1756509822296!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Lavado y Aspirado</h3>
+                <p>Lavado exterior y interior a detalle.</p>
+                <div class="price-list">
+                    <span>Carro:</span><span class="price">$160</span>
+                    <span>SUV Chica:</span><span class="price">$200</span>
+                    <span>SUV Grande, Van:</span><span class="price">$320</span>
+                    <span>Tracto Camión:</span><span class="price">$800</span>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Lavado de Alfombra</h3>
+                <p>Limpieza profunda de alfombras.</p>
+                <div class="price-list">
+                    <span>Carro:</span><span class="price">$320</span>
+                    <span>SUV Chica:</span><span class="price">$400</span>
+                    <span>SUV Grande, Van:</span><span class="price">$640</span>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Lavado Asientos</h3>
+                <p>Lavado de asientos.</p>
+                <div class="price-list">
+                    <span>Carro:</span><span class="price">$320</span>
+                    <span>SUV Chica:</span><span class="price">$400</span>
+                    <span>SUV Grande, Van:</span><span class="price">$640</span>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Cera</h3>
+                <p>Aplicación de cera para brillo y protección.</p>
+                <div class="price-list">
+                    <span>Carro:</span><span class="price">$340</span>
+                    <span>SUV Chica:</span><span class="price">$400</span>
+                    <span>SUV Grande, Van:</span><span class="price">$460</span>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Polish</h3>
+                <p>Pulido para eliminar imperfecciones.</p>
+                <div class="price-list">
+                    <span>Carro:</span><span class="price">$100.00</span>
+                    <span>SUV Chica:</span><span class="price">$130.00</span>
+                    <span>SUV Grande, Van:</span><span class="price">$150.00</span>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Motor</h3>
+                <p>Lavado de motor a presión, se usan rampas.</p>
+                <div class="price-list">
+                    <span>Carro, Pick-up Sencilla:</span><span class="price">$400</span>
+                    <span>Off Road:</span><span class="price">$360.00</span>
+                    <span>Tracto Camión:</span><span class="price">$800</span>
+                </div>
+            </div>
+            <div class="service-item service-item-wide">
+                <h3>Servicios adicionales.</h3>
+                <p>Servicios adicionales.</p>
+                <div class="price-list">
+                    <span>Armor All:</span><span class="price">$40</span>
+                    <span>Aroma:</span><span class="price">$20.00</span>
+                    <span>Boleada:</span><span class="price">$60.00</span>
+                    <span>Cinturones:</span><span class="price">$200</span>
+                    <span>Cielo:</span><span class="price">$200</span>
+                    <span>Cajuela:</span><span class="price">$200</span>
+                    <span>Puertas:</span><span class="price">$200</span>
+                    <span>Razer GDE:</span><span class="price">$800</span>
+                    <span>Razer Chico:</span><span class="price">$640</span>
+                    <span>Lavado de Chasis a presión, se usa rampa:</span><span class="price">$400</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="estrellas" class="review-section">
+        <a href="https://g.page/r/CR5DzKh65wT2EAE/review" target="_blank">
+            <img class="google-reviews-image" src="https://www.bluecorona.com/wp-content/uploads/2015/05/26-googleplusreviews.jpg" alt="Google Reviews">
+        </a>
+        <a class="review-link" href="https://g.page/r/CR5DzKh65wT2EAE/review" target="_blank">¡Deja tu reseña en Google!</a>
+    </section>
+
+</body>
+</html>
