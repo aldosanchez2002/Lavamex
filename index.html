@@ -10,7 +10,7 @@
             background-color: #f0f2f5;
             color: #333;
             margin: 0;
-            padding-top: 60px;
+            padding-top: 60px; /* Space for fixed nav bar */
         }
         header {
             background-image: linear-gradient(rgba(217, 92, 0, 0.8), rgba(217, 92, 0, 0.8)), url('https://storage.googleapis.com/g.co/immersive-docs/uploaded:Screenshot%202025-08-29%20at%204.21.50%E2%80%AFPM.jpg-29aa7aa1-8144-431e-906c-a9ec4a95a42b');
@@ -44,12 +44,14 @@
         }
         .nav-links {
             display: flex;
+            gap: 10px; /* Reduced gap for compact look */
+            padding: 0 5%;
         }
         nav a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
-            margin: 0 5px;
+            margin: 0; /* Removed margin */
             border-radius: 50px;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
             font-weight: 500;
@@ -175,6 +177,53 @@
             color: #666;
             max-width: 500px;
             margin: 0 auto;
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 600px) {
+            body {
+                padding-top: 50px;
+            }
+            nav {
+                padding: 8px 10px;
+            }
+            .nav-brand {
+                font-size: 1em;
+            }
+            .nav-links {
+                gap: 5px; /* Even smaller gap on mobile */
+                padding: 0 2%;
+            }
+            nav a {
+                padding: 8px 10px;
+            }
+            header {
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            section {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            .services-grid {
+                gap: 20px;
+            }
+            .review-section {
+                padding: 15px;
+                margin: 20px auto;
+            }
+            .contact-info {
+                padding: 5px;
+                margin: 10px auto;
+            }
+            .contact-info h2 {
+                font-size: 1em;
+            }
+            .contact-info p {
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
